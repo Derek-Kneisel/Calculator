@@ -13,6 +13,7 @@ enum modes {
     case notSet
     case addition
     case subtraction
+    case multiplication
 }
 
 class ViewController: UIViewController {
@@ -51,6 +52,14 @@ class ViewController: UIViewController {
         changeModes(newMode: .subtraction)
     }
     
+    // Multiplication button
+    @IBAction func didPressMultiply(_ sender: Any) {
+        
+        // Updates mode
+        changeModes(newMode: .multiplication)
+    }
+    
+    
     // Equals button
     @IBAction func didPressEquals(_ sender: Any) {
         
@@ -70,6 +79,9 @@ class ViewController: UIViewController {
         }
         else if (currentMode == .subtraction){
             savedNum -= labelInt
+        }
+        else if (currentMode == .multiplication){
+            savedNum *= labelInt
         }
         
         // Resets calculator and updates values
@@ -117,13 +129,18 @@ class ViewController: UIViewController {
             return
         }
         
-        // Updates result label - Assigning it as an int to avoid repeating 0's
-        label.text = "\(labelInt)"
-        
-        
         if (currentMode == .notSet){
             savedNum = labelInt
         }
+        
+        // Formats number
+        let formatter: NumberFormatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        let num: NSNumber = NSNumber(value: labelInt)
+    
+        // Updates result label - Assigning it as an int to avoid repeating 0's
+        label.text = formatter.string(from: num)
+        
     }
     
     // Updates modes
