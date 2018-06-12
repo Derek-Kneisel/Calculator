@@ -183,6 +183,9 @@
                                 <state key="normal" title="C">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qX7-Dp-IWR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-fX-Re0">
                                 <rect key="frame" x="284" y="545.5" width="81" height="111.5"/>
@@ -192,7 +195,6 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="didPressClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O17-mP-KIP"/>
                                     <action selector="didPressEquals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="73b-Ry-p03"/>
                                 </connections>
                             </button>
@@ -276,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295.19999999999999" y="117.39130434782609"/>
+            <point key="canvasLocation" x="-1559" y="117"/>
         </scene>
     </scenes>
 </document>
